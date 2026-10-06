@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BioVitta - Farmácia 24 horas em Piracicaba. Medicamentos, cosméticos, cuidados diários e suplementos.">
+  <meta name="theme-color" content="#087f5b">
+  <title>BioVitta | Farmácia 24h em Piracicaba</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span>Atendimento 24h em Piracicaba/SP</span>
+        <a href="https://wa.me/5519992990839" target="_blank" rel="noopener">Peça pelo WhatsApp +55 19 99299-0839</a>
+      </div>
+    </div>
+
+    <div class="header-main container">
+      <a class="brand" href="index.html" aria-label="BioVitta - página inicial">
+        <img src="assets/logo-biovitta.png" alt="BioVitta Farmácia">
+      </a>
+
+      <form class="search-form" id="searchForm" role="search">
+        <label class="sr-only" for="searchInput">Buscar produtos</label>
+        <input id="searchInput" type="search" placeholder="Busque por remédios, cosméticos ou suplementos..." autocomplete="off">
+        <button type="submit" aria-label="Buscar">⌕</button>
+      </form>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="accountBtn" type="button" aria-label="Área do cliente">
+          <span aria-hidden="true">♙</span><span class="action-label">Minha conta</span>
+        </button>
+        <button class="icon-btn cart-trigger" id="cartBtn" type="button" aria-label="Abrir carrinho">
+          <span aria-hidden="true">🛒</span><span class="action-label">Carrinho</span>
+          <b id="cartCount" class="cart-count">0</b>
+        </button>
+      </div>
+    </div>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <div class="container nav-inner">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false">☰ Menu</button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Início</a>
+          <div class="nav-dropdown">
+            <button type="button" class="dropdown-btn">Categorias ▾</button>
+            <div class="dropdown-menu">
+              <a href="#produtos" data-category="Medicamentos">Medicamentos</a>
+              <a href="#produtos" data-category="Perfumaria & Cosméticos">Perfumaria & Cosméticos</a>
+              <a href="#produtos" data-category="Cuidados Diários">Cuidados Diários</a>
+              <a href="#produtos" data-category="Suplementos & Vitaminas">Suplementos & Vitaminas</a>
+              <a href="#produtos" data-category="Infantil">Infantil</a>
+            </div>
+          </div>
+          <a href="#ofertas" class="offer-link">Ofertas do Dia</a>
+          <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-label="Destaques BioVitta">
+      <div class="container hero-shell">
+        <div class="hero-content">
+          <span class="eyebrow" id="heroEyebrow">BIOVITTA • ATENDIMENTO 24H</span>
+          <h1 id="heroTitle">Saúde e bem-estar quando você precisar.</h1>
+          <p id="heroText">Peça seus produtos pelo WhatsApp e conte com atendimento rápido em Piracicaba.</p>
+          <a class="btn btn-primary" id="heroCta" href="https://wa.me/5519992990839" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-orb"></div>
+          <div class="hero-card">
+            <strong>24h</strong>
+            <span>Atendimento</span>
+          </div>
+          <div class="hero-card hero-card-small">
+            <strong>⚡</strong>
+            <span>Pedido rápido</span>
+          </div>
+        </div>
+        <div class="hero-dots" aria-label="Slides do banner">
+          <button class="active" data-slide="0" aria-label="Slide 1"></button>
+          <button data-slide="1" aria-label="Slide 2"></button>
+          <button data-slide="2" aria-label="Slide 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits" aria-label="Benefícios">
+      <div class="container benefits-grid">
+        <article><span>◷</span><div><strong>Atendimento 24h</strong><small>Todos os dias</small></div></article>
+        <article><span>✓</span><div><strong>Compra rápida</strong><small>Peça pelo WhatsApp</small></div></article>
+        <article><span>▣</span><div><strong>Pagamento fácil</strong><small>Pix e cartões</small></div></article>
+        <article><span>♡</span><div><strong>Cuidado de verdade</strong><small>Saúde em primeiro lugar</small></div></article>
+      </div>
+    </section>
+
+    <section class="section" id="ofertas">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">SELEÇÃO BIOVITTA</span>
+            <h2>Ofertas e produtos em destaque</h2>
+          </div>
+          <button class="text-btn" id="clearFilters" type="button">Ver todos</button>
+        </div>
+        <div class="category-chips" aria-label="Filtrar por categoria">
+          <button class="chip active" data-category="Todos">Todos</button>
+          <button class="chip" data-category="Medicamentos">Medicamentos</button>
+          <button class="chip" data-category="Perfumaria & Cosméticos">Cosméticos</button>
+          <button class="chip" data-category="Cuidados Diários">Cuidados diários</button>
+          <button class="chip" data-category="Suplementos & Vitaminas">Vitaminas</button>
+          <button class="chip" data-category="Infantil">Infantil</button>
+        </div>
+        <div class="product-grid" id="produtos" aria-live="polite"></div>
+        <p class="empty-state hidden" id="emptyState">Nenhum produto encontrado. Tente outro termo ou categoria.</p>
+      </div>
+    </section>
+
+    <section class="trust-section">
+      <div class="container trust-grid">
+        <div>
+          <span class="eyebrow">BIOVITTA EM PIRACICABA</span>
+          <h2>Uma experiência de farmácia mais simples.</h2>
+          <p>Encontre itens de saúde, beleza e bem-estar em um só lugar. Para produtos sujeitos a receita ou controle especial, consulte as condições de venda e a legislação aplicável.</p>
+        </div>
+        <div class="trust-panel">
+          <div class="trust-icon">+</div>
+          <div>
+            <strong>Precisa de ajuda?</strong>
+            <p>Fale com nossa equipe pelo WhatsApp.</p>
+            <a href="https://wa.me/5519992990839" target="_blank" rel="noopener">+55 19 99299-0839 →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section careers-banner">
+      <div class="container careers-card">
+        <div>
+          <span class="eyebrow">TRABALHE CONOSCO</span>
+          <h2>Faça parte da equipe BioVitta.</h2>
+          <p>Cadastre seu currículo no nosso Banco de Talentos e acompanhe futuras oportunidades.</p>
+        </div>
+        <a class="btn btn-light" href="trabalhe-conosco.html">Enviar currículo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <img src="assets/logo-biovitta.png" class="footer-logo footer-logo-image" alt="BioVitta Farmácia">
+        <p>Saúde, bem-estar e atendimento próximo em Piracicaba. Conte com a BioVitta 24 horas.</p>
+        <span class="open-badge">● Atendimento 24h</span>
+      </div>
+      <div class="footer-col">
+        <h3>Atendimento</h3>
+        <address>
+          Av. Mal. Castelo Branco, 1000<br>
+          Jardim Primavera - Piracicaba/SP
+        </address>
+        <a href="tel:+5519992990839">+55 19 99299-0839</a>
+        <a href="mailto:biovitta07@gmail.com">biovitta07@gmail.com</a>
+      </div>
+      <div class="footer-col">
+        <h3>Links rápidos</h3>
+        <a href="#conteudo">Minha Conta</a>
+        <a href="#ofertas">Meus Pedidos</a>
+        <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos de Uso</a>
+      </div>
+      <div class="footer-col">
+        <h3>Redes & pagamento</h3>
+        <a href="https://instagram.com/biovitta.farm" target="_blank" rel="noopener">◎ @biovitta.farm</a>
+        <div class="payment-row" aria-label="Meios de pagamento">
+          <span>PIX</span><span>VISA</span><span>Master</span><span>ELO</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© <span id="year"></span> BioVitta. Todos os direitos reservados.</div>
+    </div>
+  </footer>
+
+  <div class="cart-overlay hidden" id="cartOverlay">
+    <aside class="cart-drawer" aria-label="Carrinho de compras">
+      <div class="cart-head">
+        <h2>Seu carrinho</h2>
+        <button class="close-btn" id="closeCart" type="button" aria-label="Fechar carrinho">×</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer">
+        <div class="cart-total"><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
+        <button class="btn btn-primary btn-full" id="checkoutWhatsapp" type="button">Finalizar pelo WhatsApp</button>
+        <small>O pedido será enviado para conferência da equipe BioVitta.</small>
+      </div>
+    </aside>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
